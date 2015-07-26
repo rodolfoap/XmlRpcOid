@@ -1,0 +1,80 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Service">
+
+    <EditTextPreference
+        android:key="service_url"
+        android:title="Service URL"
+        android:defaultValue="http://192.168.1.1/RPC2"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:maxLines="1" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Commands">
+
+        <EditTextPreference
+            android:key="command_1"
+            android:title="Command 1"
+            android:defaultValue="service1.start"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:maxLines="10" />
+
+        <EditTextPreference
+            android:key="command_2"
+            android:title="Command 2"
+            android:defaultValue="service2.start"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:maxLines="10" />
+
+        <EditTextPreference
+            android:key="command_3"
+            android:title="Command 3"
+            android:defaultValue="service3.start"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:maxLines="10" />
+
+        <EditTextPreference
+            android:key="command_4"
+            android:title="Command 4"
+            android:defaultValue="service4.start"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:maxLines="10" />
+
+        <EditTextPreference
+            android:key="command_5"
+            android:title="Command 5"
+            android:defaultValue="service5.start"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:maxLines="10" />
+
+        <EditTextPreference
+            android:key="command_6"
+            android:title="Command 6"
+            android:defaultValue="service6.start"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:maxLines="10" />
+
+        <EditTextPreference
+            android:key="command_7"
+            android:title="Command 7"
+            android:defaultValue="service7.start"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:maxLines="10" />
+
+        <EditTextPreference
+            android:key="command_8"
+            android:title="Command 8"
+            android:defaultValue="service8.start"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:maxLines="10" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
