@@ -1,8 +1,8 @@
 # XmlRpcOid
 
-Well, I just needed to control my home debian server from my mobile device. There you have a simple app to do it, using xml-rpc, java, perl on the server side -despite you can use any XML-RPC server/language you want on the server side-. This uses plain xml over http, so the connection is plain, non-encripted. I don't need it because this runs inside a VPN.
+Well, I just needed to control my home debian server from my mobile device. There you have a simple app to do it, using xml-rpc, java, perl on the server side -despite you can use any XML-RPC server/language you want on the server side-. This uses plain xml over http, so the connection is plain, non-encripted. I don't need it because this runs inside a VPN, so I run it without encryption. Don't run this over the open web!
 
-Warning: This application does not encrypt data. If you don't know what you are doing, buy a Windows box and a Windows phone and write bill.gates@microsoft.com to provide you of an app like this. You can open a door to hackers by writing open XML-RPC services. You've been warned, now it's your full responsibility. 
+Note: This application does not encrypt data. If you don't know what you are doing, buy a Windows box and a Windows phone and write bill.gates@microsoft.com to provide you of an app like this. You can open a door to hackers by writing open XML-RPC services. You've been warned, now it's your full responsibility.
 ---
 ## What is XML-RPC?
 
