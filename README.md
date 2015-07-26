@@ -2,8 +2,8 @@
 
 Well, I just needed to control my home debian server from my mobile device. There you have a simple app to do it, using xml-rpc, java, perl on the server side -despite you can use any XML-RPC server/language you want on the server side-. This uses plain xml over http, so the connection is plain, non-encripted. I don't need it because this runs inside a VPN, so I run it without encryption. Don't run this over the open web!
 
-Note: This application does not encrypt data. If you don't know what you are doing, buy a Windows box and a Windows phone and write bill.gates@microsoft.com to provide you of an app like this. You can open a door to hackers by writing open XML-RPC services. You've been warned, now it's your full responsibility.
----
+**Warning:** This application does not encrypt data. If you don't know what you are doing, buy a Windows box and a Windows phone and write bill.gates@microsoft.com to provide you of an app like this. You can open a door to hackers by writing open XML-RPC services. You've been warned, now it's your full responsibility.
+
 ## What is XML-RPC?
 
 XML RPC is just a communications protocol that uses **XML** to execute remote procedures (**RPC** stands for Remote Procedure Call). You can send two numbers to the server and it can answer with the sum, or you can ask a server to reboot.
@@ -122,24 +122,40 @@ Paste this on a file named xmlrpcserver.pl:
 
 1. Install the apk on your phone. Better if you can compile it with android studio. 
 
-2. Start the appplication
+2. Start the appplication.
 
 3. Go to SETTINGS.
+
+	- On Service URL, enter the URL of your server. The Perl Example uses something like
+
+    http://your.server.address:8080/RPC2
+
+	![Service URL example](https://github.com/rodolfoap/XmlRpcOid/blob/master/web/ServiceURL.png "Service URL example")
+
 	- On Command 7, write this:
 	
-    	os.uptime
+    os.uptime
 
 	- On Command 8, write this:
 
-    	rpc.ProductTest
-    	var1:5
-    	var2:12
+    rpc.ProductTest
+    var1:5
+    var2:12
+
+	![Command example](https://github.com/rodolfoap/XmlRpcOid/blob/master/web/Command8.png "Command entry example")
 
 4. Explanation: 
 ..* The first line is the xml-rpc command that will be called (see the **$methods** variable on the perl server). Be sure to choose a clear name, the RPC command name is shown on the main screen combo box.
 ..* The second and further lines are interpreted as parameters. They should have the format VARIABLE:VALUE (word, colon, value, which is transmitted as a string, always, so you can interpret it as you like on the server).
 ..* If the Command entry is empty, it will not be shown on the main screen commands combo box.
 ..* More lines can be added by using the ENTER key on the android keyboard.
+
+5. Test the application:
+
+	- Choose a command from the combo box
+	- Press the "Execute" button.
+
+	![Execution example](https://github.com/rodolfoap/XmlRpcOid/blob/master/web/Screenshot1.png "Execution example")
 
 ## Credits
 
