@@ -152,10 +152,14 @@ You can find a bigger example on the /lib directory of this repository.
 	![Command example](https://github.com/rodolfoap/XmlRpcOid/blob/master/web/Command8.png "Command entry example")
 
 4. Explanation: 
-..* The first line is the xml-rpc command that will be called (see the **$methods** variable on the perl server). Be sure to choose a clear name, the RPC command name is shown on the main screen combo box.
-..* The second and further lines are interpreted as parameters. They should have the format VARIABLE:VALUE (word, colon, value, which is transmitted as a string, always, so you can interpret it as you like on the server).
-..* If the Command entry is empty, it will not be shown on the main screen commands combo box.
-..* More lines can be added by using the ENTER key on the android keyboard.
+
+* The first line is the xml-rpc command that will be called (see the **$methods** variable on the perl server). Be sure to choose a clear name, the RPC command name is shown on the main screen combo box.
+
+* The second and further lines are interpreted as parameters. They should have the format VARIABLE:VALUE (word, colon, value, which is transmitted as a string, always, so you can interpret it as you like on the server).
+
+* If the Command entry is empty, it will not be shown on the main screen commands combo box.
+
+* More lines can be added by using the ENTER key on the android keyboard.
 
 5. Test the application:
 
