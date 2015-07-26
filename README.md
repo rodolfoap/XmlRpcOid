@@ -118,9 +118,16 @@ Paste this on a file named xmlrpcserver.pl:
 
 ---
 
+Execute it:
+
+    # perl xmlrpcserver.pl
+
+
+You can find a bigger example on the /lib directory of this repository.
+
 ## Client side
 
-1. Install the apk on your phone. Better if you can compile it with android studio. 
+1. Install the apk on your phone. Better if you can compile it yourself with Android Studio.
 
 2. Start the appplication.
 
