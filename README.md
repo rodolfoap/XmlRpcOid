@@ -127,13 +127,13 @@ Paste this on a file named xmlrpcserver.pl:
 3. Go to SETTINGS.
 	- On Command 7, write this:
 	
-	os.uptime
+    	os.uptime
 
 	- On Command 8, write this:
 
-	rpc.ProductTest
-	var1:5
-	var2:12
+    	rpc.ProductTest
+    	var1:5
+    	var2:12
 
 4. Explanation: 
 ..* The first line is the xml-rpc command that will be called (see the **$methods** variable on the perl server). Be sure to choose a clear name, the RPC command name is shown on the main screen combo box.
