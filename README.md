@@ -123,11 +123,11 @@ Execute it:
     # perl xmlrpcserver.pl
 
 
-You can find a bigger example on the /lib directory of this repository.
+You can find a bigger example on the /lib directory of this repository. You can replace the *uptime* command with *shutdown*, a process *kill*, a *service start*, a *useradd*, a *grep log*, whatever you can imagine. The only drawback is your security.
 
 ## Client side
 
-1. Install the apk on your phone. Better if you can compile it yourself with Android Studio.
+1. Install the apk on your phone (find it on the /apk dir of this repository). Better if you can compile it yourself with Android Studio.
 
 2. Start the appplication.
 
@@ -170,6 +170,6 @@ You can find a bigger example on the /lib directory of this repository.
 
 ## Credits
 
-* Image credits: http://www.xanadu-fx.com/tiles/fractals.php
+* Background: http://www.xanadu-fx.com/tiles/fractals.php
 
 * Android Xml-Rpc lib: http://code.google.com/p/android-xmlrpc
