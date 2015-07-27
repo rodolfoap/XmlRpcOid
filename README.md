@@ -173,3 +173,7 @@ You can find a bigger example on the /lib directory of this repository. You can 
 * Background: http://www.xanadu-fx.com/tiles/fractals.php
 
 * Android Xml-Rpc lib: http://code.google.com/p/android-xmlrpc
+
+## Current version
+
+20150727: v1.0.2
