@@ -13,17 +13,31 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by rodolfoap on 7/21/15.
+ * The executed command
+ * @author rodolfoap on 7/21/15.
  */
 public class Command {
+
+    /** The command that is being executed is on a string */
     public String command;
+
+    /** The parameters are parsed into a map*/
     public Map<String, String> params;
+
+    /** Listeners to append their logs */
     public List<Listener> listeners = new ArrayList<>();
-    
+
+    /** The listeners interface */
     public interface Listener {
         public void appendLog(String msg);
     }
 
+    /**
+     * The constructor parses the command,
+     * stores the first line into this.command,
+     * and the parameters into the map this.params
+     * @param cmdText The parseable command string
+     */
     public Command(String cmdText){
         String paramArray[];
         String lines[] = cmdText.split("\\r?\\n");
@@ -40,6 +54,10 @@ public class Command {
             }
         }
     }
+
+    /**
+     * This is used for proper formatted output
+     */
     @Override
     public String toString(){
         String text="{ COMMAND:"+this.command+"; ";
@@ -50,6 +68,11 @@ public class Command {
         return text;
     }
 
+    /**
+     * To avoid blocking behavior (for example, if the server does not answer), this is implemented on a thread;
+     * uses the XMLRPCClient library by using the .callEx rpc call
+     * @param serviceURL The server's XML-RPC service URL
+     */
     public void execute(final String serviceURL) {
         Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
         class MyThread extends AsyncTask<Command, Integer, String> {
@@ -83,6 +106,10 @@ public class Command {
         thread.execute(new Command[] { this });
     }
 
+    /**
+     * Subscription to the observers list
+     * @param message The log message that is sent to observer activity (for now, only Main)
+     */
     private void notifyObservers(String message) {
         for (Listener listener : listeners) {
             listener.appendLog(message);

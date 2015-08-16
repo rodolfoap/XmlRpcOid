@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,21 +17,46 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 
+
+/**
+ * Main activity
+ * @author rodolfoap on 7/21/15.
+ */
+
 public class MainScreen extends ActionBarActivity implements Command.Listener {
+    /** A message that goes on the main screen log */
     String logMessage="";
+
+    /** Some screen elements */
     TextView textView1;
     Spinner sItems;
     Hashtable<String, String> qryResult;
     List<String> spinnerList;
-    public String SERVICE_URL;// Example: "http://192.168.1.31:8080/RPC2";
-    public List<Command> commandList; // Example command: "server.addition\na:1\nb:2: which may add a and b on the server
 
+    /**
+     * The XML-RPC server's URL
+     * Example: "http://192.168.1.31:8080/RPC2";
+     */
+    public String SERVICE_URL;
+
+    /**
+     * The command to be encapsulated into XML
+     * Example command: "server.addition\na:1\nb:2: which may add a and b on the server
+     */
+    public List<Command> commandList;
+
+    /**
+     * After any action, reload preferences
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
         loadPreferences();
     }
 
+    /**
+     * After any action, reload preferences
+     */
     @Override
     public void onResume() {
         super.onResume();
@@ -38,12 +64,17 @@ public class MainScreen extends ActionBarActivity implements Command.Listener {
         loadPreferences();
     }
 
+    /**
+     * After startup, load screen, preferences and the spinner
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
         setContentView(R.layout.main_screen);
         textView1 = (TextView) findViewById(R.id.textView1);
+        // Scrolling requires this:
+        textView1.setMovementMethod(new ScrollingMovementMethod());
         sItems = (Spinner) findViewById(R.id.cmdSpinner);
         this.commandList=new ArrayList<Command>();
         this.spinnerList=new ArrayList<String>();
@@ -51,6 +82,9 @@ public class MainScreen extends ActionBarActivity implements Command.Listener {
         loadSpinner();
     }
 
+    /**
+     * Inflating the menu
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
@@ -58,6 +92,9 @@ public class MainScreen extends ActionBarActivity implements Command.Listener {
         return true;
     }
 
+    /**
+     * After any action, reload preferences
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
@@ -71,12 +108,18 @@ public class MainScreen extends ActionBarActivity implements Command.Listener {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * The main log control appender
+     */
     public void appendLog(String message){
         Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
         this.logMessage=this.logMessage+message+"\n";
         textView1.setText(this.logMessage);
     }
 
+    /**
+     * Loading preferences method
+     */
     private void loadPreferences(){
         Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
         SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -84,7 +127,7 @@ public class MainScreen extends ActionBarActivity implements Command.Listener {
         this.commandList.clear();
         Command tmpCommand;
         String tmpCommString;
-        for(int a=1; a<9; a++) {
+        for(int a=1; a<33; a++) {
             tmpCommString=mySharedPreferences.getString("command_"+a, "");
             if(tmpCommString.length()>0) {
                 tmpCommand = new Command(tmpCommString);
@@ -93,6 +136,10 @@ public class MainScreen extends ActionBarActivity implements Command.Listener {
             }
         }
     }
+
+    /**
+     * Spinner loading
+     */
     private void loadSpinner() {
         Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
         this.spinnerList.clear();
@@ -104,6 +151,9 @@ public class MainScreen extends ActionBarActivity implements Command.Listener {
         sItems.setAdapter(adapter);
     }
 
+    /**
+     * Execute button calls the command execute() method
+     */
     public void buttonExecute(View view){
         Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
         String selected = sItems.getSelectedItem().toString();
@@ -115,12 +165,18 @@ public class MainScreen extends ActionBarActivity implements Command.Listener {
         }
     }
 
+    /**
+     * Clearing the log with the button
+     */
     public void clearLog(View view){
         Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
         this.logMessage="";
         textView1.setText(this.logMessage);
     }
 
+    /**
+     * App Settings button
+     */
     public void appSettings(View view){
         Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
         Intent myIntent = new Intent(MainScreen.this, SettingsActivity.class);
@@ -129,6 +185,9 @@ public class MainScreen extends ActionBarActivity implements Command.Listener {
         loadSpinner();
     }
 
+    /**
+     * Close app button
+     */
     public void closeApp(View view){
         Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
         finish();
