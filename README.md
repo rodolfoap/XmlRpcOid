@@ -176,4 +176,6 @@ You can find a bigger example on the /lib directory of this repository. You can 
 
 ## Current version
 
+20150816: v1.1.3
+20150816: v1.1.2 (broken)
 20150727: v1.0.2

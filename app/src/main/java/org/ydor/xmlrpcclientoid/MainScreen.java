@@ -70,8 +70,8 @@ public class MainScreen extends ActionBarActivity implements Command.Listener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
         setContentView(R.layout.main_screen);
+        Log.i("XmlRpcClientoid", new Throwable().getStackTrace()[0].toString()); /* RODOLFO */
         textView1 = (TextView) findViewById(R.id.textView1);
         // Scrolling requires this:
         textView1.setMovementMethod(new ScrollingMovementMethod());
