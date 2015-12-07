@@ -2,39 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/opt/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-ea622c1adf9cbc639f1608628ead55eb372774fb.jar" />
-    </item>
-    <item
-        jar="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/xmlrpc-android/xmlrpc-android.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="26d6a7cde81a5450471c7d3adfda11ce4762ffa7">
-        <dex dex="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/app/build/intermediates/pre-dexed/debug/xmlrpc-android-d81a7e43e28bef1e2abc642359ea085bf8c434a7.jar" />
-    </item>
-    <item
-        jar="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jar="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-ac8e0f0bc189f94d243eec4301dd08d55ef0a5d2.jar" />
-    </item>
-    <item
-        jar="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/pre-dexed/debug/classes-350790a802493e7e16cfcedfbe13c1643fb8ba92.jar" />
-    </item>
-    <item
-        jar="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/pre-dexed/debug/classes-4ee693bb0ddf7652d63633814093d7354341b8c5.jar" />
+        <dex dex="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/pre-dexed/release/internal_impl-22.2.0-cb826bed88b4f8185bbe4ed051e99391afb0abd8.jar" />
     </item>
     <item
         jar="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
@@ -44,6 +16,13 @@
         <dex dex="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/app/build/intermediates/pre-dexed/debug/classes-249531dd6e9cf22b9de577ea5a9278292f843027.jar" />
     </item>
     <item
+        jar="/home/rodolfoap/wrk/dev/xmlrpcoid/xmlrpc-android/xmlrpc-android.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="26d6a7cde81a5450471c7d3adfda11ce4762ffa7">
+        <dex dex="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/pre-dexed/release/xmlrpc-android-b8c9277636733b05fb077d7f5faee725065be382.jar" />
+    </item>
+    <item
         jar="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -51,18 +30,39 @@
         <dex dex="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/app/build/intermediates/pre-dexed/debug/classes-1cd24e2f0960ecd77d76c241e5aabd570e3b6603.jar" />
     </item>
     <item
-        jar="/home/rodolfoap/wrk/dev/xmlrpcoid/xmlrpc-android/xmlrpc-android.jar"
+        jar="/opt/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="26d6a7cde81a5450471c7d3adfda11ce4762ffa7">
-        <dex dex="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/pre-dexed/debug/xmlrpc-android-b8c9277636733b05fb077d7f5faee725065be382.jar" />
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-ea622c1adf9cbc639f1608628ead55eb372774fb.jar" />
     </item>
     <item
-        jar="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jar="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/pre-dexed/release/classes-4ee693bb0ddf7652d63633814093d7354341b8c5.jar" />
+    </item>
+    <item
+        jar="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-cb826bed88b4f8185bbe4ed051e99391afb0abd8.jar" />
+        <dex dex="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-ac8e0f0bc189f94d243eec4301dd08d55ef0a5d2.jar" />
+    </item>
+    <item
+        jar="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/xmlrpc-android/xmlrpc-android.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="26d6a7cde81a5450471c7d3adfda11ce4762ffa7">
+        <dex dex="/home/rodolfoap/wrk/dev/astudio/XmlRpcClientoid/app/build/intermediates/pre-dexed/debug/xmlrpc-android-d81a7e43e28bef1e2abc642359ea085bf8c434a7.jar" />
+    </item>
+    <item
+        jar="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/home/rodolfoap/wrk/dev/xmlrpcoid/app/build/intermediates/pre-dexed/release/classes-350790a802493e7e16cfcedfbe13c1643fb8ba92.jar" />
     </item>
 
 </items>
