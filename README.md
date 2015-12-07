@@ -177,3 +177,4 @@ You can find a bigger example on the /lib directory of this repository. You can 
 ## Current version
 
 20150727: v1.0.2
+
